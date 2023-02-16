@@ -1,0 +1,55 @@
+String is immuntable class where concat does not return the same string
+String s = "Happy";
+s.concat(1, 2); //returns the reference to another string
+System.out.println(s); //prints out "Happy" since s still refers to the references of "Happy"
+
+s = s.concat(1, 3);
+System.out.println(s); //prints out "ap" since we changed the refernce stored in the variable
+
+
+QUESTION: 
+int arr1 [] = new int[] { 1,2,3,4,5,6,7,8,9,10 };
+int arr2 [] = new int[];
+bookArray = arr1; //shallow copy
+for (int i = 0; i < ) {
+arr1[i] = arr2[i];    //deep copy? with line 13 or without??
+}
+
+An instance data field defines a variable/constant which represents a property of an object
+instance of the class, whose value varies from an object to another.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PRACTICE:
+**/ Create a Student class according to the following specification. The Student class Must define:
+A String class constant named CAMPUS whose value is "UW_Madison"
+A String variable named first to store the student’s first name
+A String variable named last to store the student’s last name
+An integer constant named UNIQUE_ID that contains the unique ID number for this student
+An integer class variable named nextUniqueID that contains the unique ID number for the next student
+An integer class variable named numberOfStudents that keeps track of the number of students that have been created so far
+A constructor Student(String  first, String last)
+Several public get/set methods
+*/
+
+public Student () {
+  private static final String CAMPUS = "UW_MADISON"; //"final" means it can be only initalized one time
+  //this object must be declared and intialized within the class
+  private final int UNIQUE_ID; //will differentiate between different students therefore don't 
+  //initialize it here
+  private String first;
+  private String last;
+  private static int nextUniqueID;
+  private static int numberOfStudents;
+  
+  public Student(String first, String last)  {
+    CAMPUS = "UW_M"; //this would create a complier error\
+    this.first = first;
+    this.last = last;
+    this.UNIQUE_ID = nextUniqueID;
+    }
+  
+    public static void main (String[] args) {
+    Student studentOne = new Student("Adriana ", "Pierangeli");
+    Student studentTwo = new Student("Lily", "Cui");
+    }
+  }
