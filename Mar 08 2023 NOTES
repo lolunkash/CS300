@@ -1,0 +1,16 @@
+instanceof check if the object in the heap is an instance of that type, 
+not whether if the reference is that type
+
+EX: tiven the above class definiton, which of these statements MUST be 
+TRUE so that the following cast operation executes without errors
+Child c = (Child)p;
+
+CORRECT ANSWER: p instanceof child
+
+True or False? When a class implements an interface, it MUST override all 
+the abstract methods defined in that interface.
+TRUE
+
+
+if two object types are not directly related, use explicit casting:
+
